@@ -13,3 +13,15 @@ DISPLAY_TYPE_CHOICES = getattr(
     'GALLERY_DISPLAY_TYPE_CHOICES',
     GALLERY_DISPLAY_TYPE_CHOICES_DEFAULT
 )
+
+
+GALLERY_TEMPLATE_CHOICES_DEFAULT = (
+    ('image_gallery/partials/gallery.html', _('Default')),
+    ('image_gallery/partials/test_template.html', _('Test Template')),
+)
+
+TEMPLATE_CHOICES = getattr(
+    settings,
+    'GALLERY_TEMPLATE_CHOICES',
+    GALLERY_TEMPLATE_CHOICES_DEFAULT
+)

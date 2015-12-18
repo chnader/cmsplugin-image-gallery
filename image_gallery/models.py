@@ -183,3 +183,11 @@ class GalleryPlugin(CMSPlugin):
         choices=app_settings.DISPLAY_TYPE_CHOICES,
         blank=True,
     )
+
+    template = models.CharField(
+        max_length=256,
+        choices=app_settings.TEMPLATE_CHOICES,
+        blank=True,
+    )
+
+

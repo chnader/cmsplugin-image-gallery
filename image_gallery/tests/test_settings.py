@@ -63,6 +63,7 @@ EXTERNAL_APPS = [
     'sekizai',
     'filer',
     'easy_thumbnails',
+    'modeltranslation',
 ]
 
 INTERNAL_APPS = [
@@ -76,6 +77,11 @@ COVERAGE_MODULE_EXCLUDES += EXTERNAL_APPS
 LANGUAGE_CODE = 'en'
 LANGUAGES = [
     ('en', 'English'),
+    ('fr', 'fr'),
+    ('ar', 'ar'),
+    ('fa', 'fa'),
+    ('pt', 'pt'),
+    ('de', 'de'),
 ]
 
 MIDDLEWARE_CLASSES = [

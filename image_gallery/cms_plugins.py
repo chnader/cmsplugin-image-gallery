@@ -5,12 +5,14 @@ from cms.plugin_base import CMSPluginBase
 from cms.plugin_pool import plugin_pool
 
 from image_gallery.models import GalleryPlugin
+from . import app_settings
 
 
 class CMSGalleryPlugin(CMSPluginBase):
+
     model = GalleryPlugin
     name = _('Filer Gallery')
-    render_template = 'image_gallery/partials/gallery.html'
+    render_template = app_settings.TEMPLATE_CHOICES[0][0]
 
     def render(self, context, instance, placeholder):
         context.update({
@@ -19,6 +21,7 @@ class CMSGalleryPlugin(CMSPluginBase):
             'placeholder': placeholder,
             'display_type': instance.display_type,
         })
+        self.render_template = instance.template
         return context
 
 plugin_pool.register_plugin(CMSGalleryPlugin)
