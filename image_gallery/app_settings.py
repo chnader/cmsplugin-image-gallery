@@ -17,7 +17,6 @@ DISPLAY_TYPE_CHOICES = getattr(
 
 GALLERY_TEMPLATE_CHOICES_DEFAULT = (
     ('image_gallery/partials/gallery.html', _('Default')),
-    ('image_gallery/partials/test_template.html', _('Test Template')),
 )
 
 TEMPLATE_CHOICES = getattr(
